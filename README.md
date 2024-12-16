@@ -1,4 +1,27 @@
 
+
+日期：2024年12月16日
+
+# 编程式导航
+
+```js
+function ClientProjectsPage(){
+    const router = useRouter();
+    console.log(router.query);
+
+    function loadProjectHandler(){
+        //编程式导航
+        router.push('/clients/max/projecta').then(r => console.log(r));
+    }
+    return (
+        <div>
+            <h1>This is Client  index Page</h1>
+            <button onClick={loadProjectHandler}>Load Project A</button>
+        </div>
+    )
+}
+```
+
 # 演示
 
 ![react-nextjs-link.gif](document%2Freact-nextjs-link.gif)
